@@ -135,8 +135,8 @@ public class Login extends javax.swing.JFrame {
         String username = user.getText();
         String password = pass.getText();
         try{
-            Class.forName("com.mysql.jdbo.Driver");
-            Connection con=DriverManager.getConnection("jdbcmysql://127.0.0.1/database_perpustakaan","root", "");
+            Class.forName("com.mysql.jdbc.Driver");
+            Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/database_perpustakaan","root", "");
             Statement stat=con.createStatement();
             ResultSet res=stat.executeQuery("Select * from login where Username"+"'"+username+"and Password'"+password+"'");
             System.out.println("Koneksi berhasil!!");
