@@ -31,7 +31,7 @@ ResultSet res;
     private void koneksi(){
         try{
             Class.forName("com.mysql.jdbc.Driver");
-            Connection con=DriverManager.getConnection("jdbcmysql://127.0.0.1/database_perpustakaan","root", "");
+            Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/database_perpustakaan","root", "");
             stat= con.createStatement();
         }catch(Exception e){
             JOptionPane.showMessageDialog(null, e);
